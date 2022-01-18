@@ -90,9 +90,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-brand a{    
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 500;
-    font-family: 'Zilla Slab', serif;    
     position: relative;
     
 }
@@ -343,7 +342,7 @@ h1, h2, h3, h4, h5, h6 {
 filter: brightness(80%) ;
     /* margin: auto; */
 }
-.btn-feature{
+.btn-feature, .btn-submit{
     background-image: linear-gradient(to right,#6E6675  0%, #F4D03F  51%, #6E6675  100%);
    margin: 10px;
    text-align: center;
@@ -549,49 +548,48 @@ filter: brightness(80%) ;
 }
 
 /* contact */
-.contact-details{
-    padding: 1rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.301);
-    border-radius: 15px;
-    transition: all .3s;
-}
-
-.contact-text h4,
-.contact-text p{
-    color: #252525 !important;
-}
-
-.input input,
-.input textarea{
-    background: #f5f5f5;
-    outline: none !important;
-    border: none !important;
-}
-
-.input input:focus,
-.input textarea:focus{
-    background: #eee;
-    color: #222222;
+#contact{
+    background:linear-gradient(rgba(0, 75, 238, 0.637), rgba(0, 118, 181, 0.431)), url(img/5.jpg);
+    background-position: center;
+    background-size: cover;
+    /* height: 50vh; */
 }
 
 ::placeholder{
-    color: #252525;
-    font-weight: 500;
+    color: var(--white-color) !important;
 }
 
+.contact-details{
+    width: 70%;
+    margin: auto;
+    /* background: #000; */
+    padding: 1rem;
+}
 
-.input input:focus,
-.input textarea:focus{
+.contact-details input,
+.contact-details textarea{
+        box-shadow: 2px 2px 30px rgb(0 0 0 / 3%);
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.267);
+        transition: all 0.3s;
+        color: var(--white-color) !important;
+}
+
+.contact-details input:focus,
+.contact-details textarea:focus{
     box-shadow: none !important;
+    background: inherit !important;
 }
 
-
+.btn-submit:hover{
+    color: var(--white-color);
+}
 .circle-icon {
     color: var(--white-color) !important;
     margin: 0 15px ;
-    font-size: 1.4rem;
-    width: 50px;
-    height: 50px;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -623,13 +621,14 @@ color: #8a3ab9;
 
 
 
+
 @media (max-width:1040px) {
     .home-item h2{
 		font-size:3rem;
 	}
+    
 
 }
-
 @media (max-width:767px) { 
     .home-item h2{
         font-size: 2rem;
@@ -665,5 +664,9 @@ color: #8a3ab9;
 
     .carousel-item p{
         font-size: 11px;
+    }   
+
+    .contact-details{
+        width: 100%;
     }
 }
